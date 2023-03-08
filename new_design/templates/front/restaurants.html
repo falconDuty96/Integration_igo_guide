@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Igoguide</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+    <!-- Fontawesome -->
+    
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 	
+	<!-- CSS Custom -->
+	<link rel="stylesheet" href="assets/css/index.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<script>
+		FontAwesomeConfig = { autoReplaceSvg: false }
+	</script>
+
+</head>
+<body>
+
+   <!-- Entete -->
+	<div class="container-fluid" id="entete_logo">
+		<!-- Conteneur centré -->
+		<div class="container pb-0">	
+			<div class="row">
+				<!-- Place logo -->
+				<div class="col-xl-6 col-md-6 col-6" id="entete_logo_gauche">
+					<img src="assets/image/logo.png" alt="logo Igoguide">
+					<span class="ml-2" id="slogan">Vos envies coïncident !</span>
+				</div>
+				<div class="col-xl-6 col-md-6 col-sm-6" id="entete_logo_droite">
+					
+					<a href="login_utilisateur.html" class="btn btn-dark btn-log-container"><i class="fa-solid fa-user icon-log"></i><span class="btn-log">Se connecter</span></a>
+					<a href="login.html" class="btn btn-dark btn-log-container"><i class="fa-solid fa-user-tie icon-log"></i><span class="btn-log">Espace Pro</span></a>
+					<a class="dropdown">
+						<a type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="langue">
+							<img src="assets/icone/fr-flag.png" id="flag-show" alt="">
+						</a>
+
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item icon-flag-menu" href="#"> <img src="assets/icone/fr-flag.png" class="dropdown-icon"><span class="ml-2">Français</span></a>
+						<a class="dropdown-item icon-flag-menu" href="#"> <img src="assets/icone/eng-flag.png" class="dropdown-icon"><span class="ml-2">Anglais</span></a>
+
+					</div>
+
+				</div>
+				<div class="col-xl-6 col-md-6 col-sm-6 col-6">
+					
+					<i class="fa-solid fa-bars float-right" id="bars" state="off"></i>
+
+				</div>
+				
+			</div>		
+		</div>	
+
+		<div id="accordion" class="container d-none">
+			<div class="card">
+				<div class="card-header" id="headingOne">
+					<h5 class="mb-0">
+						<img src="assets/icone/ic_a.png" alt="" class="nav_icone_bars">
+					<button class="btn btn-link text-white" data-toggle="collapse" data-target="#collapseNone" aria-expanded="false" aria-controls="collapseNone">
+						Accueil
+					</button>
+					</h5>
+				</div>
+			</div>	
+			<div class="card">
+			  <div class="card-header" id="headingOne">
+				<h5 class="mb-0">
+					<img src="assets/icone/herbergement.png" alt="" class="nav_icone_bars">
+				  <button class="btn btn-link text-white" data-toggle="modal" data-target="#myModal1" aria-expanded="false" aria-controls="collapseOne">
+					Hébergement
+				  </button>
+				</h5>
+			  </div>
+		  
+			  
+			</div>
+			<div class="card">
+			  <div class="card-header" id="headingTwo">
+				<h5 class="mb-0">
+					<img src="assets/icone/Ou_Boire.png" alt="" class="nav_icone_bars" id="icone_ou_boire"> 
+				  <button class="btn btn-link text-white collapsed" data-toggle="modal" data-target="#myModal2" aria-expanded="false" aria-controls="collapseTwo">
+					
+					Où boire
+				  </button>
+				</h5>
+			  </div>
+			  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					
+				</div>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="card-header" id="headingThree">
+				<h5 class="mb-0">
+					<img src="assets/icone/Ou_Manger.png" alt="" class="nav_icone_bars" id="icone_ou_manger">
+					<button class="btn btn-link text-white collapsed" data-toggle="modal" data-target="#myModal3" aria-expanded="false" aria-controls="collapseThree">
+					
+					Où manger
+				  </button>
+				</h5>
+			  </div>
+			  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+				<div class="card-body">
+					<ul>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_whiskies.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Lounges / Whiskies / Cocktails</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_rooftop.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à rooftop</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_vin.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à vins</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_pubs _ tapas.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Pubs / Bars à tapas</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_billard.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à thèmes / Jeux / Billards</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/concert_bar.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Concerts bars</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_chat.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à chats</a>
+							<!-- </div> -->
+						</li>
+					</ul>
+				</div>
+			  </div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingFour">
+				  <h5 class="mb-0">
+					<img src="assets/icone/Balades.png" alt="" class="nav_icone_bars" id="icone_balade"> 
+					  <button class="btn btn-link text-white collapsed"data-toggle="modal" data-target="#myModal4" aria-expanded="false" aria-controls="collapseFour">
+					  
+					  Balades
+					</button>
+				  </h5>
+				</div>
+				<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+				  <div class="card-body">
+					<ul>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_whiskies.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Lounges / Whiskies / Cocktails</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_rooftop.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à rooftop</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_vin.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à vins</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_pubs _ tapas.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Pubs / Bars à tapas</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_billard.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à thèmes / Jeux / Billards</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/concert_bar.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Concerts bars</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_chat.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à chats</a>
+							<!-- </div> -->
+						</li>
+					</ul>
+				  </div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingFive">
+				  <h5 class="mb-0">
+					<img src="assets/icone/Activites.png" alt="" class="nav_icone_bars" id="icone_activite">
+					  <button class="btn btn-link text-white collapsed" data-toggle="modal" data-target="#myModal5" aria-expanded="false" aria-controls="collapseFive">
+					  
+						Activités
+					</button>
+				  </h5>
+				</div>
+				<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+				  <div class="card-body">
+					<ul>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_whiskies.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Lounges / Whiskies / Cocktails</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_rooftop.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à rooftop</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_vin.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à vins</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_pubs _ tapas.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Pubs / Bars à tapas</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_billard.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à thèmes / Jeux / Billards</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/concert_bar.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Concerts bars</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_chat.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à chats</a>
+							<!-- </div> -->
+						</li>
+					</ul>
+				  </div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingSix">
+				  <h5 class="mb-0">
+					<img src="assets/icone/Services.png" alt="" class="nav_icone_bars" id="icone_service">
+					  <button class="btn btn-link text-white collapsed" data-toggle="modal" data-target="#myModal6" aria-expanded="false" aria-controls="collapseSix">
+					  
+					  Services
+					</button>
+				  </h5>
+				</div>
+				<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+				  <div class="card-body">
+					<ul>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_whiskies.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Lounges / Whiskies / Cocktails</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_rooftop.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à rooftop</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_vin.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à vins</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_pubs _ tapas.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Pubs / Bars à tapas</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_billard.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à thèmes / Jeux / Billards</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/concert_bar.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Concerts bars</a>
+							<!-- </div> -->
+						</li>
+						<li class="mb-3">
+							<img class="" src="assets/image/bar_chat.png" style="height:45px" alt="">
+							<!-- <div class="pl-1"> -->
+								<a href="" class="text-white ml-2" style="font-size: 13px;">Bars à chats</a>
+							<!-- </div> -->
+						</li>
+					</ul>
+				  </div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingSix">
+				  <h5 class="mb-0">
+					<i class='fa-solid fa-user text-white'></i>
+					  <button class="btn btn-link text-white collapsed" data-toggle="modal" data-target="#myModal6Resp" aria-expanded="false" aria-controls="collapseSix">
+					  
+					  Se connecter
+					</button>
+				  </h5>
+				</div>
+				
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingSix">
+				  <h5 class="mb-0">
+					<i class="fa-solid fa-user-tie text-white"></i>
+					  <button class="btn btn-link text-white collapsed" data-toggle="modal" data-target="#myModal6Resp" aria-expanded="false" aria-controls="collapseSix">
+					  
+					Espace pro
+					</button>
+				  </h5>
+				</div>
+				
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingSix">
+				  <h5 class="mb-0">
+					<img src="assets/icone/fr-flag.png" class="nav_icone_bars">
+					  <button class="btn btn-link text-white collapsed" data-toggle="modal" data-target="#myModal6Resp" aria-expanded="false" aria-controls="collapseSix">
+					  
+					Français
+					</button>
+				  </h5>
+				</div>
+				
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingSix">
+				  <h5 class="mb-0">
+					<img src="assets/icone/eng-flag.png" class="nav_icone_bars">
+					  <button class="btn btn-link text-white collapsed" data-toggle="modal" data-target="#myModal6Resp" aria-expanded="false" aria-controls="collapseSix">
+					  
+					Anglais
+					</button>
+				  </h5>
+				</div>
+				
+			</div>
+		  </div>
+
+
+		
+	</div>
+
+	
+
+	<!-- Navigation -->
+	<div class="container-fluid" id="navigation">
+		<!-- Navbar -->
+		<div class="container">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+				<!-- Links -->
+				<ul class="navbar-nav">
+					<li class="nav-item icon-menu" id="menu-1">
+						<img src="assets/icone/ic_a.png" alt="" class="nav_icone">
+						<a class="nav-link" href="index.html">Accueil</a>
+					</li>
+					<li class="nav-item icon-menu" data-shower="1" id="menu-2">
+						<img src="assets/icone/herbergement.png" alt="" class="nav_icone">
+						<a class="nav-link " href="#">Hébergement</a>
+						<!-- Sous menu -->
+
+						
+					</li>
+					<li class="nav-item icon-menu" data-shower="2" id="menu-3">
+						<img src="assets/icone/Ou_Boire.png" alt="" class="nav_icone" id="icone_ou_boire"> 
+						<a class="nav-link" href="#">Où boire</a>
+					</li>
+					<li class="nav-item icon-menu" data-shower="3" id="menu-4">
+						<img src="assets/icone/Ou_Manger.png" alt="" class="nav_icone" id="icone_ou_manger">
+						<a class="nav-link" href="#">Où manger</a>
+					</li>
+					<li class="nav-item icon-menu" data-shower="4" id="menu-5">
+						<img src="assets/icone/Balades.png" alt="" class="nav_icone" id="icone_balade"> 
+						<a class="nav-link" href="#">Balades</a>
+					</li>
+					<li class="nav-item icon-menu" data-shower="5" id="menu-6">
+						<img src="assets/icone/Activites.png" alt="" class="nav_icone" id="icone_activite">
+						<a class="nav-link" href="#">Activités</a>
+					</li>
+					<li class="nav-item icon-menu" data-shower="6" id="menu-7">
+						<img src="assets/icone/Services.png" alt="" class="nav_icone" id="icone_service">
+						<a class="nav-link" href="#">Services</a>
+						
+					</li>
+				</ul>
+				
+			</nav>
+			<div class="container boite-menu pt-3 pl-4" id="boite-1">
+				<div class="conteneur-submenu">
+					<div class="content-submenu mr-2  mb-4">
+						<a href="resultat-recherche.html"><img class="img-submenu" style="left: 42px;" src="assets/image/Hébergements/icones cabanes dans les arbres igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="resultat-recherche.html">Cabanes dans les arbres</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href="resultat-recherche.html"><img class="img-submenu" style="left: 20px;" src="assets/image/Hébergements/icones cabanes sous terre igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="resultat-recherche.html">Cabanes sous terre</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 13px;" src="assets/image/Hébergements/icone cabane sur terre igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Cabanes sur terre</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 6px;" src="assets/image/Hébergements/icone cabane sur l_eau igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Cabanes sur l'eau</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 9px;" src="assets/image/Hébergements/icone bulle igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Bulles</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 16px;" src="assets/image/Hébergements/icone tipis_tente_yourte igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Tipis / Tente / Yourte</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 17px;" src="assets/image/Hébergements/icone habitat roulant igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Habitats roulants</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 13px;" src="assets/image/Hébergements/icone monument historique igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Monuments historiques</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Hébergements/icone bateau igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Bateux</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Hébergements/icone hébergements de charme igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Hébergements de charme</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Hébergements/icone hotels atypiques igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Hôtels atypiques</a>
+						</p>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+			
+			<div class="container boite-menu pt-3 pl-4" id="boite-2">
+				<div class="conteneur-submenu">
+					<div class="content-submenu mr-2  mb-4 content-submenu-7">
+						<a href=""><img class="img-submenu" style="left: 21px;" src="assets/image/Ou boire/icone bar à whiskies igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Lounges / Whiskies / Coktails</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Ou boire/icone bar rooftop igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Bars à rooftop</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 8px;" src="assets/image/Ou boire/icone bar à vin igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Bars à vins</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 6px;" src="assets/image/Ou boire/icone bar pubs _ tapas igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Pubs / Bars à tapas</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 5px;" src="assets/image/Ou boire/icone bar billard.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Bars à thèmes / Jeux / Billards</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 28px;" src="assets/image/Ou boire/icone concert bar igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Concerts bars</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 20px;" src="assets/image/Ou boire/icone bar à chat igoguidee.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Bars à chats</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="container boite-menu pt-3 pl-4" id="boite-3">
+				<div class="conteneur-submenu">
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 24px;" src="assets/image/Ou manger/icone_restaurants_originaux.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Restaurant originaux</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 52px;" src="assets/image/Ou manger/Restaurants avec animation.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Restaurants avec animations</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Ou manger/brasserie bistrot.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Brasserie - Bistrot - Auberges</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Ou manger/icone cuisine traditionnelle igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Cuisines traditionnelles</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Ou manger/icone cuisine du monde igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Cuisines du monde</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Ou manger/icone type fast food igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Types fast food / Tapas</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="container boite-menu pt-3 pl-4" id="boite-4">
+				<div class="conteneur-submenu conteneur-submenu-5">
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Balades/icone au fil de l_eau igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Au fil de l'eau</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 30px;" src="assets/image/Balades/icones randonnées nature igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Randonnées nature</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 23px;" src="assets/image/Balades/icone monuments hsitoriques igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Sites historiques</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 62px;" src="assets/image/Balades/icone les perles sauvages igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Les perles sauvages</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2  mb-4">
+						<a href=""><img class="img-submenu" style="left: 45px;" src="assets/image/Balades/Icone jardins de l_imaginaire igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Les jardins de l'imaginaire</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="container boite-menu pt-3 pl-4" id="boite-5">
+				<div class="conteneur-submenu">
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Activités/icone ateliers et stage igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Ateliers et stages</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 30px;" src="assets/image/Activités/icone activités sportives igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Activités sportives</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Activités/icones activités ludiques igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Activités ludiques</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 7px;" src="assets/image/Activités/icones activités gustatives igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Activités gustative</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 34px;" src="assets/image/Activités/icone activité educative igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Activités éducatives</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 5px;" src="assets/image/Activités/icone activités bien etre igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Activités bien-être</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Activités/icone shopping artisans créateurs igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Shoppings artisans et créateurs</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="container boite-menu pt-3 pl-4" id="boite-6">
+				<div class="conteneur-submenu">
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 37px;" src="assets/image/Services/icone organisateurs igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Organisateurs</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 7px;" src="assets/image/Services/icone photographe igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold " href="">Photographes etc.</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: -8px;" src="assets/image/Services/icone traiteur igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Traiteurs</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 34px;" src="assets/image/Services/icone fleuriste igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Fleuristes</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" style="left: 7px;" src="assets/image/Services/icone location de voiture igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Locations de véhicules</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Services/icone location de velo igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Locations de vélos</a>
+						</p>
+					</div>
+					<div class="content-submenu mr-2 content-submenu-7 mb-4">
+						<a href=""><img class="img-submenu" src="assets/image/Services/icone divers pressing igoguide.png" alt=""></a>
+						<p class="text-center">
+							<a class="toBold" href="">Divers</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+
+
+    <!-- Bannière -->
+	<div class="container-fluid banniere" style="background-image: url('assets/image/Images_Categorisation/restaurants.jpg');">
+		<div class="masque-specialisation">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="content-banniere-speciale">
+                            <h2 class="titre" style="color: #dd1406;">Où manger ?</h2>
+                            <p class="text-white">Des nuits atypiques, c'est assuré...insolites, c'est probable...et des nuits magiques, c'est certain ! L'univers que les hôtes ont créé est inventif et rend ces moments inoubliables.</p>
+                            <!-- <a href="" class="btn" style="background-color: #dd1406; color: white ;">Explorer</a> -->
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="boite-speciale boite-speciale-restaurants border mr-3 mt-3">
+                    <div class="boite-img-circular">
+                        <div class="icon-circular mt-5">
+                            <img class="img-submenu" src="assets/image/Ou manger/icone_restaurants_originaux.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <p class="text-center boldTxt">Restaurants originaux</p>
+					<div class="w-50">
+						<button style="background-color: #dd1406; color: white ;" class="btn btn-block btn-decouvrir"  data-toggle="modal" data-target="#myModal1">Découvrir</button>
+					</div>
+                </div>
+                <div class="boite-speciale boite-speciale-restaurants border mr-3 mt-3">
+                    <div class="boite-img-circular">
+                        <div class="icon-circular mt-5">
+                            <img class="img-submenu" src="assets/image/Ou manger/Restaurants avec animation.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <p class="text-center boldTxt">Restaurants avec animation</p>
+					<div class="w-50">
+						<button style="background-color: #dd1406; color: white ;" class="btn btn-block btn-decouvrir"  data-toggle="modal" data-target="#myModal2">Découvrir</button>
+					</div>
+                </div>
+                <div class="boite-speciale boite-speciale-restaurants border mr-3 mt-3">
+                    <div class="boite-img-circular">
+                        <div class="icon-circular mt-5">
+                            <img class="img-submenu" src="assets/image/Ou manger/brasserie bistrot.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <p class="text-center boldTxt">Brasseries - Bistrots - Auberges</p>
+					<div class="w-50">
+						<button style="background-color: #dd1406; color: white ;" class="btn btn-block btn-decouvrir"  data-toggle="modal" data-target="#myModal3">Découvrir</button>
+					</div>
+                </div>
+                <div class="boite-speciale boite-speciale-restaurants border mr-3 mt-3">
+                    <div class="boite-img-circular">
+                        <div class="icon-circular mt-5">
+                            <img class="img-submenu" src="assets/image/Ou manger/icone cuisine traditionnelle igoguide.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <p class="text-center boldTxt">Cuisine traditionnelle</p>
+					<div class="w-50">
+						<button style="background-color: #dd1406; color: white ;" class="btn btn-block btn-decouvrir"  data-toggle="modal" data-target="#myModal4">Découvrir</button>
+					</div>
+                </div>
+                <div class="boite-speciale boite-speciale-restaurants border mr-3 mt-3">
+                    <div class="boite-img-circular">
+                        <div class="icon-circular mt-5">
+                            <img class="img-submenu" src="assets/image/Ou manger/icone cuisine du monde igoguide.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <p class="text-center boldTxt">Cuisine du monde</p>
+					<div class="w-50">
+						<button style="background-color: #dd1406; color: white ;" class="btn btn-block btn-decouvrir"  data-toggle="modal" data-target="#myModal5">Découvrir</button>
+					</div>
+                </div>
+                <div class="boite-speciale boite-speciale-restaurants border mr-3 mt-3">
+                    <div class="boite-img-circular">
+                        <div class="icon-circular mt-5">
+                            <img class="img-submenu" src="assets/image/Ou manger/icone type fast food igoguide.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <p class="text-center boldTxt">Type Fast - Food - Tapas</p>
+					<div class="w-50">
+						<button style="background-color: #dd1406; color: white ;" class="btn btn-block btn-decouvrir"  data-toggle="modal" data-target="#myModal6">Découvrir</button>
+					</div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+	<div class="container-fluid mt-5" id="footer" style="background-color: #2d2925;">
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="row">
+						<div class="col-md-12">
+							<img class="logo-footer mb-2" src="assets/image/logo.png" alt="logo Igoguide">
+							<p class="text-white mt-2">La plateforme intuitive qui vous trouve toutes vos adresses de loisirs !</p>
+							
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-md-12">
+							<p class="boldTxt text-white">Rejoignez-nous</p>
+							<ul class="my-list">
+								<li>
+									<a href=""><i class="fab fa-facebook-f colored-icon"></i></a>
+									<a href=""><i class="fab fa-instagram colored-icon"></i></a>
+									<!-- <a href=""><i class="fab fa-google colored-icon"></i></a> -->
+								</li>
+								<li>
+									<a href="">Devenez partenaire</a>
+								</li>
+								<li>
+									<a href="">Offrez un bon-cadeau</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-md-2 col-sm-6">
+					<p class="boldTxt text-white">A propos</p>
+					<ul class="my-list">
+						<li>
+							<a href="">Besoin d'aide ?</a>
+						</li>
+						<li>
+							<a href="">Mentions légales</a>
+						</li>
+						<li>
+							<a href="">Confidentialité</a>
+						</li>
+						<li>
+							<a href="">CGU</a>
+						</li>
+						<li>
+							<a href="">FAQ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-6">
+					<p class="boldTxt text-white ">Catégories</p>
+					<ul class="my-list">
+						<li>
+							<a href="">Hébergements</a>
+						</li>
+						<li>
+							<a href="">Où boire ?</a>
+						</li>
+						<li>
+							<a href="">Où manger</a>
+						</li>
+						<li>
+							<a href="">Balades</a>
+						</li>
+						<li>
+							<a href="">Activités</a>
+						</li>
+						<li>
+							<a href="">Services</a>
+						</li>
+						<li>
+							<a href="">Hauts-de-France</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-6">
+					<p class="boldTxt text-white">Pour vous</p>
+					<ul class="my-list">
+						<li>
+							<a href="">Carte cadeau</a>
+						</li>
+						<li>
+							<a href="">Se connecter</a>
+						</li>
+						<li>
+							<a href="">Espace pro</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<p class="boldTxt text-white ">Commentaires</p>
+					<ul class="my-list">
+						<li>
+							<div class="media">
+								<img class="mr-3 img-mo" src="assets/image/au_fil_de_l_eau.png" alt="Generic placeholder image">
+								<div class="media-body">
+								  	<p class="text-white text-comments">Super expérience avec ce guide pour vous montrer les sites touristiques cachés</p> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="media">
+								<img class="mr-3 img-mo" src="assets/image/au_fil_de_l_eau.png" alt="Generic placeholder image">
+								<div class="media-body">
+								  	<p class="text-white text-comments">J'ai pu compilé mes activités avec mon hébergement. Je recommande!</p> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="media">
+								<img class="mr-3 img-mo" src="assets/image/au_fil_de_l_eau.png" alt="Generic placeholder image">
+								<div class="media-body">
+								  	<p class="text-white text-comments">Avec IGOguide, j'ai découvert une nouvelle façon de chercher mes loisirs! Le site est très interactif et j'ai pu enfin trouver les activités de mes enfants et un restaurant aux alentours. Très simple! C'est ce qui nous manquait!</p> 
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="copyright">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p class="text-white copyright" id="copyright-1">IGOgroup ne facture aucun frais de service pour les utilisateurs de notre site.</p>
+				<p class="text-white copyright" id="copyright-2">2020 - 2023 IGOguide Tous droits réservés.</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- The Modal -->
+	<div class="modal fade modal-modif" id="myModal1">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title boldTxt">Restaurants originaux</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+			  <p>De nombreux restaurants proposent pour les soirées de fête entre amis ou d'anniversaire, des animations avec certains concepts assez hors normes pour séduire les clients !</p>
+			</div>
+	  
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+			</div>
+	  
+		  </div>
+		</div>
+	  </div>
+
+	  <!-- The Modal -->
+	<div class="modal fade modal-modif" id="myModal2">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title boldTxt">Restaurants avec animations</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+			  <p>Une soirée avec animation est une manière d’offrir une expérience unique et différente aux clients, de souder les équipes de travail, de divertir les amis et de s’amuser en famille. Bien sûr, un groupe de musique est l’animation en général !</p>
+			</div>
+	  
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+			</div>
+	  
+		  </div>
+		</div>
+	  </div>
+
+
+	  <!-- The Modal -->
+	<div class="modal fade modal-modif" id="myModal3">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title boldTxt">Brasseries - Bistrots - Auberges</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+			  <p>Si, au départ, le bistro avec tables en bois ou zinc et nappes vichy, se voulait modeste et sans prétention, à présent, ils proposent des espaces généralement ouverts, conviviaux et modernes. Le design y a pris une place importante !</p>
+			</div>
+	  
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+			</div>
+	  
+		  </div>
+		</div>
+	  </div>
+	  <!-- The Modal -->
+	<div class="modal fade modal-modif" id="myModal4">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title boldTxt">Cuisine traditionnelle</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+			  <p>La cuisine traditionnelle française fait référence à divers styles gastronomiques dérivés de la culture française. Chaque région, parfois même chaque département, regorge de recettes traditionnelles souvent transmises de génération en génération. </p>
+			</div>
+	  
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+			</div>
+	  
+		  </div>
+		</div>
+	  </div>
+
+	  <!-- The Modal -->
+	<div class="modal fade modal-modif" id="myModal5">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title boldTxt">Cuisine du monde</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+			  <p>On aurait envie de se changer les idées et partir ailleurs manger une cuisine aux saveurs exotiques! On peut voyager et se faire un petit tour du monde à travers les cuisines asiatique, orientale, américaine et européenne.</p>
+			</div>
+	  
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+			</div>
+	  
+		  </div>
+		</div>
+	  </div>
+
+
+	  <!-- The Modal -->
+	<div class="modal fade modal-modif" id="myModal6">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title boldTxt">Type fast-food - Tapas</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+			  <p>Ce type de restauration est axé sur la rapidité, à toute heure et pour un prix peu élevé, qui peuvent être consommés sur place ou emportés sous emballage. On y retrouve les food-trucks et les traditionnels enseignes d’hamburgers, des kebabs, de pizza</p>
+			</div>
+	  
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+			</div>
+	  
+		  </div>
+		</div>
+	  </div>
+
+	
+	  <div class="modal modal-modif" id="myModal1Resp">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			<!-- Modal Header -->
+			<!-- <div class="modal-header">
+			  <h4 class="modal-title"></h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div> -->
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<br>
+				<ul class="list-group">
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/cabane_arbres.png" style="height:45px;width: 45px;" alt="">
+						
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px; ">Cabane dans les arbres</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/cabane_sous_terre.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Cabane sous terre</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/cabane_sur_terre.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Cabane sur terre</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/cabane_sur_l_eau.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Cabane sur l'eau</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/bulle.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Bulles</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/tipis_tente_yourte.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Tipis / tente / Yourte</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/habitat_roulant.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Habitas roulants</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/monument_historique.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Monuments historiques</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/bateau.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Bateaux</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/cabane_arbres.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Hebergements de charme</a>
+						</div>
+					</li>
+					<li class=" list-group-item list-v-center">
+						<img class="" src="assets/image/hotels_atypiques.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Hôtels atypiques</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	  
+			<!-- Modal footer -->
+			<!-- <div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+			</div> -->
+	  
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal modal-modif" id="myModal2Resp">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<br>
+				
+				<ul class="list-group">
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/bar_whiskies.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Lounges / Whiskies / Cocktails</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/bar_rooftop.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Bars à rooftop</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/bar_vin.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Bars à vins</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/bar_pubs _ tapas.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Pubs / Bars à tapas</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/bar_billard.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Bars à thèmes / Jeux / Billards</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/concert_bar.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Concerts bars</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/bar_chat.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Bars à chats</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	  
+			
+	  
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal modal-modif" id="myModal3Resp">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<br>
+				<ul class="list-group">
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/restaurants_originaux.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Restaurants originaux</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/restaurants_annimation.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Restaurants avec animations</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/brasserie_bistrot.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Brasserie - Bistrot - Auberges</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/cuisine_traditionnelle.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Cuisines traditionnelles</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/cuisine_monde.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Cuisines du monde</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/type_fast_food.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Types fast food / tapas</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	  
+	  
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal modal-modif" id="myModal4Resp">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<br>
+				<ul class="list-group">
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/au_fil_de_l_eau.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Au fil de l'eau</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/perles_sauvages.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Randonnées nature</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/monument_historique.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Sites historiques</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/perles_sauvages.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Les perles sauvages</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/jardins_imaginaire.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Les jardins imaginaires</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	  
+	  
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal modal-modif" id="myModal5Resp">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<br>
+				<ul class="list-group">
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/restaurants_originaux.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Ateliers et stages</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/restaurants_annimation.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Activités sportives</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/brasserie_bistrot.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Activités ludiques</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/cuisine_traditionnelle.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Activités gustative</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/cuisine_monde.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Activités bien-être</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/type_fast_food.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Shoppind artisans et créateurs</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	  
+	  
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal modal-modif" id="myModal6Resp">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<br>
+				<ul class="list-group">
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/organisateurs.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Organisateurs</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/photographe.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Photographes etc.</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/traiteur.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class=" ml-2" style="font-size: 13px;">Traiteurs</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/fleuriste.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Fleuristes</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/location_voiture.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Locations de véhicules</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/location_velo.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Locations de vélos</a>
+						</div>
+					</li>
+					<li class="list-group-item list-v-center">
+						<img class="" src="assets/image/divers_pressing.png" style="height:45px;width: 45px;" alt="">
+						<div class="pl-1">
+							<a href="" class="ml-2" style="font-size: 13px;">Divers</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	  
+	  
+		  </div>
+		</div>
+	  </div>
+
+	
+	  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	<script src="assets/js/app.js"></script>
+</body>
+</html>

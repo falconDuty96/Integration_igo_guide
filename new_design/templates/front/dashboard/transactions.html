@@ -1,0 +1,183 @@
+{% extends 'template-parts/template-dashboard.html' %}
+{% load static %}
+{% block content_dashboard %}
+    <div class="main">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="pt-2">
+                    <span class="sidebar-title">
+                        <span>Fiches</span>
+                        
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/dashboard" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-file"></i></span>
+                            <span class="ms-2">Fiches</span>
+                        </a>
+                        <!-- <a href="a#" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-rectangle-list"></i></span>
+                            <span class="ms-2">Liste</span>
+                        </a> -->
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Abonnements</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/abonnement" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
+                            <span class="ms-2">Nouvel abonnement</span>
+                        </a>
+                        <a href="/transactions" class="sidebar-link active">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">Transactions</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Messages</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/mails" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                            <span class="ms-2">Mails</span>
+                        </a>
+                        <a href="/notifications" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-handshake-angle"></i></span>
+                            <span class="ms-2">Notifications</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Pages</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/profil" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
+                            <span class="ms-2">Profil</span>
+                        </a>
+                        <a href="/faq" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                            <span class="ms-2">F.A.Q</span>
+                        </a>
+                        <a href="/cgv" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">C.G.V</span>
+                        </a>
+                        <a href="/cgu" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">C.G.U</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <main class="content">
+                <h1 class="h3">Nouvelle transaction</h1>
+<div class="form-container shadow shadow-sm">
+    <h6 class="form-title d-flex justify-content-between">
+        <span>Transactions enregistrées</span>
+        <span>
+            <!-- <button class="_btn _btn-primary" onclick="createTransactions()">
+                <i class="fa-solid fa-plus"></i>
+                <span>Ajouter</span>
+            </button> -->
+			<button type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#modal-transactions" id="open-modal-transactions"></button>
+        </span>
+    </h6>
+    <div class="form-table">
+        
+        <div class="table-responsive table-sticky">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Etablissement</th>
+                        <th>Montant</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mamaliza</td>
+                        <td>65000 MGA</td>
+                        <td>22/02/2023</td>
+                        <td><p class="pending w-50 text-center bolder">En cours</p></td>
+                    </tr>
+                    <tr>
+                        <td>Mamaliza</td>
+                        <td>65000 MGA</td>
+                        <td>22/02/2023</td>
+                        <td><p class="success w-50 text-center bolder">Effectué</p></td>
+                    </tr>
+                    <tr>
+                        <td>Mamaliza</td>
+                        <td>65000 MGA</td>
+                        <td>22/02/2023</td>
+                        <td><p class="rejected w-50 text-center bolder">Rejeté</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-transactions" tabindex="-1" aria-labelledby="modal-transactions" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog" id="form-header">
+    
+<form class="modal-content">
+        
+    <div class="modal-header">
+        <h1 class="modal-title fs-5">Créer Abonnement</h1>
+        <button type="button" id="close-modal-abonnement" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        
+        <div class="form-group">
+            <label for="header-gt">Nombre d'année :</label>
+            <input type="number" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="header-gt">Etablissement :</label>
+            <select class="form-control">
+                <option value="">Mamaliza</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="header-gt">Total</label>
+            <input type="text" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+            <label for="header-gt">Nombre d'année :</label>
+            <input type="date" class="form-control">
+        </div>
+        
+
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="_btn _btn-success w-100">Créer</button>
+    </div>
+</form>
+
+  </div>
+</div>
+            </main>
+
+            <div class="messenger shadow rounded d-none">
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

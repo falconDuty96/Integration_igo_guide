@@ -1,0 +1,168 @@
+
+{% extends 'template-parts/template-dashboard.html' %}
+{% load static %}
+{% block content_dashboard %}
+    <div class="main">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="pt-2">
+                    <span class="sidebar-title">
+                        <span>Fiches</span>
+                        
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/dashboard" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-file"></i></span>
+                            <span class="ms-2">Fiches</span>
+                        </a>
+                        <!-- <a href="a#" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-rectangle-list"></i></span>
+                            <span class="ms-2">Liste</span>
+                        </a> -->
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Abonnements</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/abonnement" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
+                            <span class="ms-2">Nouvel abonnement</span>
+                        </a>
+                        <a href="/transactions" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">Transactions</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Messages</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/mails" class="sidebar-link active">
+                            <span class="icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                            <span class="ms-2">Mails</span>
+                        </a>
+                        <a href="/notifications" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-handshake-angle"></i></span>
+                            <span class="ms-2">Notifications</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Pages</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/profil" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
+                            <span class="ms-2">Profil</span>
+                        </a>
+                        <a href="/faq" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                            <span class="ms-2">F.A.Q</span>
+                        </a>
+                        <a href="/cgv" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">C.G.V</span>
+                        </a>
+                        <a href="/cgu" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">C.G.U</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <main class="content">
+                <h1 class="h3">Liste d'email</h1>
+<div class="form-container shadow shadow-sm">
+    <h6 class="form-title d-flex justify-content-between">
+        <span>Liste d'emails</span>
+        <span>
+            <!-- <button class="_btn _btn-primary" onclick="createEmails()">
+                <i class="fa-solid fa-plus"></i>
+                <span>Ajouter</span>
+            </button> -->
+			<button type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#modal-emails" id="open-modal-emails"></button>
+        </span>
+    </h6>
+    <div class="form-table">
+        
+        <div class="table-responsive table-sticky">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Envoyeur</th>
+                        <th>Objet</th>
+                        <th>Date</th>
+                        <th>Etat</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ketaka@gmail.com</td>
+                        <td class="text-limiter" style="max-width: 150px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quidem voluptate asperiores nihil pariatur dolore ratione soluta esse doloribus, veritatis at expedita eveniet inventore numquam reprehenderit neque suscipit ex placeat?</td>
+                        
+                        <td>21/02/2023</td>
+                        <td>Non lu</td>
+                        <td>
+                            <span role="button" onclick="createEmails()" class="btn-tooltip text-success" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Voir">
+                                <i class="fa-regular fa-eye"></i>
+                            </span>
+                        </td>   
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-emails" tabindex="-1" aria-labelledby="modal-emails" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog" id="form-header">
+    
+<form class="modal-content">
+        
+    <div class="modal-header">
+        <h1 class="modal-title fs-5">Contenu</h1>
+        <button type="button" id="close-modal-emails" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        
+        <div class="header-content">
+            <p class="bolder">Envoyeur: </p>
+            <p>ketaka@gmail.com</p>
+        </div>
+        <div class="body-content">
+            <p class="bolder">Objet:</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, nobis id. Tempore, vitae sint veritatis cupiditate atque similique voluptates at repellat nulla, id facere aliquid maiores doloribus! Dolore, consectetur praesentium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores soluta aut, perspiciatis tenetur quae culpa et dignissimos quidem fuga corporis, quia ea repellat beatae impedit rerum hic fugiat earum eveniet.</p>
+        </div>
+        
+
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="_btn _btn-success w-50">Fermer</button>
+    </div>
+</form>
+
+  </div>
+</div>
+            </main>
+
+            <div class="messenger shadow rounded d-none">
+            </div>
+        </div>
+    </div>
+    {% endblock %}

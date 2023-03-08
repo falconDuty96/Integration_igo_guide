@@ -1,0 +1,340 @@
+
+{% extends 'template-parts/template-dashboard.html' %}
+{% load static %}
+{% block content_dashboard %}
+        <div class="main">
+            <div class="wrapper">
+                <div class="sidebar">
+                    <div class="pt-2">
+                        <span class="sidebar-title">
+                            <span>Fiches</span>
+                            
+                            <span class="line"></span>
+                        </span>
+                        <div class="pt-2">
+                            <a href="/dashboard" class="sidebar-link active">
+                                <span class="icon"><i class="fa-solid fa-file"></i></span>
+                                <span class="ms-2">Fiches</span>
+                            </a>
+                            <!-- <a href="a#" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-rectangle-list"></i></span>
+                                <span class="ms-2">Liste</span>
+                            </a> -->
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="sidebar-title">
+                            <span>Abonnements</span>
+                            <span class="line"></span>
+                        </span>
+                        <div class="pt-2">
+                            <a href="/abonnement" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
+                                <span class="ms-2">Nouvel abonnement</span>
+                            </a>
+                            <a href="/transactions" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                                <span class="ms-2">Transactions</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="sidebar-title">
+                            <span>Messages</span>
+                            <span class="line"></span>
+                        </span>
+                        <div class="pt-2">
+                            <a href="/mails" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                                <span class="ms-2">Mails</span>
+                            </a>
+                            <a href="/notifications" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-handshake-angle"></i></span>
+                                <span class="ms-2">Notifications</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <span class="sidebar-title">
+                            <span>Pages</span>
+                            <span class="line"></span>
+                        </span>
+                        <div class="pt-2">
+                            <a href="/profil" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
+                                <span class="ms-2">Profil</span>
+                            </a>
+                            <a href="/faq" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                                <span class="ms-2">F.A.Q</span>
+                            </a>
+                            <a href="/cgv" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                                <span class="ms-2">C.G.V</span>
+                            </a>
+                            <a href="/cgu" class="sidebar-link">
+                                <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                                <span class="ms-2">C.G.U</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <main class="content">
+                    <h1 class="h3">Nouvelle fiche</h1>
+    <div class="form-container shadow shadow-sm">
+        <h6 class="form-title d-flex justify-content-between">
+            <span>Fiches enregistrées</span>
+            <span>
+                <button class="_btn _btn-primary" onclick="createFiche()">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Ajouter</span>
+                </button>
+                <button type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#modal-fiche" id="open-modal-fiche"></button>
+            </span>
+        </h6>
+        <div class="form-table">
+            
+            <div class="table-responsive table-sticky">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nom de l'établissement</th>
+                            <th>Adresse</th>
+                            <th>Catégorie</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>Mamaliza</td>
+                            <td>Ampandrana en face cité Perrier</td>
+                            <td>Cabanne sous terre</td>
+                            <td>
+                                <span role="button" class="btn-tooltip text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Editer">
+                                    <i class="fa-regular fa-eye"></i>
+                                </span>
+                                <span role="button" class="btn-tooltip text-success" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Editer">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </span>
+                                <span role="button" class="btn-tooltip ms-1 text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Supprimer">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </span>
+                            </td>   
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-fiche" tabindex="-1" aria-labelledby="modal-fiche" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog" id="form-header">
+        
+    <form class="modal-content">
+            
+        <div class="modal-header">
+            <h1 class="modal-title fs-5">Créer fiche</h1>
+            <button type="button" id="close-modal-fiche" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <span class="sidebar-title my-3">
+                <span class="bolder">Indentité de l'établissement</span>
+                <span class="line"></span>
+            </span>
+            <div class="form-group">
+                <label>Nom de l'établissement :</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label>Télephone :</label>
+                <input type="text" class="form-control" name="telephone">
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <input type="text" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label>Description :</label>
+                <input type="text" class="form-control" name="presentation">
+            </div>
+            <div class="form-group">
+                <label>Mot clés :</label>
+                <input type="text" class="form-control" name="tags">
+            </div>
+
+            <span class="sidebar-title my-3">
+                <span class="bolder">Localisation</span>
+                <span class="line"></span>
+            </span>
+            <div class="form-group">
+                <label>Adresse :</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Pays :</label>
+                <input type="text" class="form-control" name="pays">
+            </div>
+            <div class="form-group">
+                <label>Longitude :</label>
+                <input type="text" class="form-control" name="longitude">
+            </div>
+            <div class="form-group">
+                <label>Latitude :</label>
+                <input type="text" class="form-control" name="latitude">
+            </div>
+            <div class="form-group">
+                <label>Code postal :</label>
+                <input type="text" class="form-control" name="code_postal">
+            </div>
+            <div class="form-group">
+                <label>Ville :</label>
+                <input type="text" class="form-control" name="ville">
+            </div>
+            <div class="form-group">
+                <label>Région :</label>
+                <input type="text" class="form-control" name="region">
+            </div>
+            <div class="form-group">
+                <label>Departement :</label>
+                <input type="text" class="form-control" name="departement">
+            </div>
+
+            <span class="sidebar-title my-3">
+                <span class="bolder">Réseaux sociaux</span>
+                <span class="line"></span>
+            </span>
+            <div class="form-group">
+                <label>Site web :</label>
+                <input type="text" class="form-control" name="website">
+            </div>
+            <div class="form-group">
+                <label>Facebook :</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Instagram :</label>
+                <input type="text" class="form-control">
+            </div>
+
+
+            <span class="sidebar-title my-3">
+                <span class="bolder">Média</span>
+                <span class="line"></span>
+            </span>
+            <div class="form-group">
+                <label>Image de l'établissement :</label>
+                <input type="file" class="form-control">
+            </div>
+            <span class="sidebar-title my-3">
+                <span class="bolder">Catégories</span>
+                <span class="line"></span>
+            </span>
+            <div class="form-group">
+                <select class="form-select" id="selector-categ" name="categorie">
+                    <option value="categ-1">Hébergements</option>
+                    <option value="categ-2">Où boire</option>
+                    <option value="categ-3">Où manger</option>
+                    <option value="categ-4">Balades</option>
+                    <option value="categ-5">Activités</option>
+                    <option value="categ-6">Services</option>
+                </select>
+            </div>
+            <span class="sidebar-title my-3">
+                <span class="bolder">Sous-catégorie</span>
+                <span class="line"></span>
+            </span>
+            <div class="form-group sc-selector" id="categ-1">
+                <select class="form-select">
+                    <option value="">Cabanes sur terre</option>
+                    <option value="">Cabanes sous terre</option>
+                    <option value="">Cabanes sur l'eau</option>
+                    <option value="">Cabanes sur Tippis/Tentes/Yourts</option>
+                    <option value="">Habitats roulants</option>
+                    <option value="">Cabanes sur les arbres</option>
+                    <option value="">Bulles</option>
+                    <option value="">Monuments historiques</option>
+                    <option value="">Bâteaux</option>
+                    <option value="">Hébergements de charme</option>
+                    <option value="">Hôtels atypiques</option>
+                </select>
+            </div>
+            <div class="form-group d-none sc-selector" id="categ-2">
+                <select class="form-select">
+                    <option value="">Bars à lounge/Whisky/Cocktails</option>
+                    <option value="">Concerts bars</option>
+                    <option value="">Bars à vin</option>
+                    <option value="">Pubs-Bars à tapas</option>
+                    <option value="">Bars à thèmes-jeux-billard</option>
+                    <option value="">Bars à rooftop</option>
+                    <option value="">Bars à chat</option>
+                </select>
+            </div>
+            <div class="form-group d-none sc-selector" id="categ-3">
+                <select class="form-select">
+                    <option value="">Restaurants originaux</option>
+                    <option value="">Restaurants avec animations</option>
+                    <option value="">Cuisines traditionnelle</option>
+                    <option value="">Cuisines du monde</option>
+                    <option value="">Types fast food/tapas</option>
+                    <option value="">Brasseries-Bistrot-Auberges</option>
+                </select>
+            </div>
+            <div class="form-group d-none sc-selector" id="categ-4">
+                <select class="form-select">
+                    <option value="">Randonnées nature</option>
+                    <option value="">Au fil de l'eau</option>
+                    <option value="">Sites historiques</option>
+                    <option value="">Perles sauvages</option>
+                    <option value="">Les jardins de imaginaire</option>
+                </select>
+            </div>
+            <div class="form-group d-none sc-selector" id="categ-5">
+                <select class="form-select">
+                    <option value="">Ateliers-Stages</option>
+                    <option value="">Activités physiques et sportives</option>
+                    <option value="">Activités ludiques</option>
+                    <option value="">Activités gustatives</option>
+                    <option value="">Activités éducatives</option>
+                    <option value="">Activités bien-être</option>
+                    <option value="">Shopping artisans et créateurs</option>
+                </select>
+            </div>
+            <div class="form-group d-none sc-selector" id="categ-6">
+                <select class="form-select">
+                    <option value="">Organisateurs</option>
+                    <option value="">Photographes et vidéo</option>
+                    <option value="">Traiteurs</option>
+                    <option value="">Fleuristes</option>
+                    <option value="">Locations de véhicules</option>
+                    <option value="">Locations de vélos</option>
+                    <option value="">Divers</option>
+                </select>
+            </div>
+            <span class="sidebar-title my-3">
+                <span class="bolder">Divers</span>
+                <span class="line"></span>
+            </span>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="_btn _btn-success w-100">Créer</button>
+        </div>
+    </form>
+
+    </div>
+    </div>
+                </main>
+
+                <div class="messenger shadow rounded d-none">
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+        

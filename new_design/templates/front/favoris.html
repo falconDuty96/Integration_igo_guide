@@ -1,0 +1,27 @@
+{% extends 'template-parts/template.html' %}
+{% load static %}
+{% block content %}
+	
+
+
+    <div style="min-height: 500px;" class="container-fluid">
+        <div class="container">
+            <h2 class="text-center my-3 entete_row">Mes favoris</h2>
+            <div class="show_favorites" style="display: flex; flex-wrap: wrap; justify-content: center;">
+
+				{% for c in favoris_content %}
+                <div class="favorite_box">
+                    <div class="header-favorite"></div>
+                    <div class="body_favorite">
+                        <p>Cabanne sur les arbres</p>
+                        <p>Wix palace</p>
+                        <p>Address</p>
+                    </div>
+                </div>
+				{% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+	{% endblock %}

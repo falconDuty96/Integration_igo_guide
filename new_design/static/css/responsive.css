@@ -1,0 +1,123 @@
+@media all and (max-width: 1199px) {
+    .nav-item {
+        width: 130px;
+    }
+    .nav-item {
+        width: 130px;
+    }
+    #form-banniere form{
+        width: 894px;
+    } 
+    #form-banniere form #btn-rechercher {
+        width: 157px;
+    }
+    .element-rejoindre {
+        margin-top: 10px ;
+    }
+    #region_france_liste {
+        padding-left: 5px ;
+    }
+    .content-banniere-speciale {
+        margin-top: 55px ;
+ 
+    }
+    .masque-specialisation {
+        height: 200px ;
+    }
+    
+}
+
+@media all and (max-width: 991px) {
+    .entete_logo_results {
+        top: 0px ;
+    }
+    #content_results {
+        margin-top: 60px ;
+    }
+    #navigation,#entete_logo_droite {
+        display: none ;
+    }
+    #bars {
+        display: inline-block;
+    }
+    #form-banniere form{
+        width: 685px;
+    } 
+    #form-banniere form input{
+        width: 238px;
+    } 
+    #form-banniere form #btn-rechercher {
+        width: 172px;
+    }   
+    #entete_logo {
+        position: fixed;
+        z-index: 1200;
+    }
+    #trouver_departement {
+        width: 100% ;
+      }
+      #trouver_region {
+        width: 100% !important; 
+      }
+    .element-rejoindre {
+        margin-top: 10px ;
+        
+    }
+    #region_france {
+        justify-content: center;
+    }
+    #region_france_liste {
+        padding-left: 40px ;
+    }
+    .content-banniere-speciale {
+        width: 500px ;
+      }
+      #maps {
+        display: none ;
+    }
+}
+
+@media all and (max-width: 767px) {
+    #form-banniere form {
+        width: 480px;
+    }
+    #form-banniere form input {
+        width: 150px;
+    }
+    #form-banniere form #btn-rechercher {
+        width: 143px;
+    }
+    .card-height-reform {
+        height: 540px;
+    }
+    #region_france_liste {
+        padding-left: 25px ;
+    }
+
+    .content-banniere-speciale {
+        width: 450px ;
+      }
+    
+}
+
+@media all and (max-width: 575px) {
+    #slogan {
+        display: none ;
+    }
+    
+}
+@media all and (max-width: 555px) {
+    #region_france_liste {
+        padding-left: 10px;
+    }
+    
+}
+@media all and (max-width: 525px) {
+    #region_france_liste {
+        padding-left: 5px;
+    }
+    #region_france {
+        justify-content: center;
+    }
+    
+}

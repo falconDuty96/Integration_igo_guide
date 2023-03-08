@@ -1,0 +1,4 @@
+To Wilfried:
+    .modif last_name + first_name not ok (BUG)
+    .comment modifier image/photo d'un utilisateur (Particular/professional)
+    .reset password: particular + professional

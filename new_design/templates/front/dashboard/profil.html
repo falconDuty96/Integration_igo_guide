@@ -1,0 +1,156 @@
+{% extends 'template-parts/template-dashboard.html' %}
+{% load static %}
+{% block content_dashboard %}
+    <div class="main">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="pt-2">
+                    <span class="sidebar-title">
+                        <span>Fiches</span>
+                        
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/dashboard" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-file"></i></span>
+                            <span class="ms-2">Fiches</span>
+                        </a>
+                        <!-- <a href="a#" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-rectangle-list"></i></span>
+                            <span class="ms-2">Liste</span>
+                        </a> -->
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Abonnements</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/abonnement" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
+                            <span class="ms-2">Nouvel abonnement</span>
+                        </a>
+                        <a href="/transactions" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">Transactions</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Messages</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/mails" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                            <span class="ms-2">Mails</span>
+                        </a>
+                        <a href="/notifications" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-handshake-angle"></i></span>
+                            <span class="ms-2">Notifications</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="sidebar-title">
+                        <span>Pages</span>
+                        <span class="line"></span>
+                    </span>
+                    <div class="pt-2">
+                        <a href="/profil" class="sidebar-link active">
+                            <span class="icon"><i class="fa-solid fa-grip-vertical"></i></span>
+                            <span class="ms-2">Profil</span>
+                        </a>
+                        <a href="/faq" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                            <span class="ms-2">F.A.Q</span>
+                        </a>
+                        <a href="/cgv" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">C.G.V</span>
+                        </a>
+                        <a href="/cgu" class="sidebar-link">
+                            <span class="icon"><i class="fa-solid fa-receipt"></i></span>
+                            <span class="ms-2">C.G.U</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <main class="content">
+                <h1 class="h3">Modifier profil</h1>
+                <form action="/update_professional/{{ params.id }}" method="POST">
+                <div class="container mt-4">
+                    <div class="form-conteneur" style="width: 500px;">
+                        <div class="row mb-2">
+                            <!-- <div class="col-md-2">Photo:</div>
+                            <div class="pdp-container" style="background-image: url('assets/image/logo-pour-fond-blanc.png');">
+                                <div class="hover-clickable" id="hover-clicked">
+                                    <p class="text-white text-center mt-3">Modifier</p>
+                                </div>
+                            </div> -->
+                            <input type="file" class="d-none" id="clickable">
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-2">Nom:</div>
+                            <div class="col-md-6"><input type="text" name="last_name" class="form-control" value="{{ params.last_name }}"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-2">Prénom:</div>
+                            <div class="col-md-6"><input type="text" name="first_name" class="form-control" value="{{ params.first_name }}"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-2">E-mail:</div>
+                            <div class="col-md-6"><input type="text" name="email" class="form-control" value="{{ params.email }}"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-2">Télephone:</div>
+                            <div class="col-md-6"><input type="text" name="phone" class="form-control" value="{{ params.phone }}"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <input type="submit" class="btn btn-primary" value="Modifier">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+                <hr>
+                <h1 class="h3">Modifier Mot de passe</h1>
+                <div class="container mt-4">
+                    <div class="form-conteneur" style="width: 500px;">
+                        
+                        <div class="row mb-2">
+                            <div class="col-md-5">Ancien mot de passe:</div>
+                            <div class="col-md-7"><input type="password" class="form-control" value=""></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-5">Nouveau mot de passe:</div>
+                            <div class="col-md-7"><input type="password" class="form-control" value=""></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-5">Confirmer mot de passe:</div>
+                            <div class="col-md-7"><input type="password" class="form-control" value=""></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-7">
+                                <input type="submit" class="btn btn-primary" value="Modifier">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <div class="messenger shadow rounded d-none">
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
